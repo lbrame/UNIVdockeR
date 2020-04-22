@@ -26,7 +26,7 @@ If this has worked correctly, the output of `docker images` should show an image
 
 ### Using
 
-This is a Docker image that can be used as a blueprint to run Docker containers on top of it. Docker containers are immutable, so it's recommended to save the actual work on the host system. These instructions will create a new empty folder and start a container based on this image for simplicity, but you can mount any host directory using the flag `--volume /path/to/host/directory/:/mount/point/on/guest`.
+This is a Docker image that can be used as a blueprint to run Docker containers on top of it. Docker containers are meant to be immutable, so it's recommended to save the actual work on the host system. These instructions will create a new empty folder and start a container based on this image for simplicity, but you can mount any host directory using the flag `--volume /path/to/host/directory/:/mount/point/on/guest`.
 
 ```bash
 mkdir univr
