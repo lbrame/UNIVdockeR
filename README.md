@@ -19,7 +19,7 @@ Once Docker is up and running:
 ```bash
 git clone https://github.com/lbrame/UNIVdockeR
 cd UNIVdockeR
-docker build . t univr_year_1
+docker build . -t univr_year_1
 ```
 
 If this has worked correctly, the output of `docker images` should show an image tagged `univr_year_1`.
