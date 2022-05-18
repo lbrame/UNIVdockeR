@@ -22,6 +22,12 @@ cd UNIVdockeR
 docker build . -t univr_year_1
 ```
 
+### Build args (optional):
+build args, use with `--build-arg ARG_NAME=VALUE` flag:
+- **USER_ID**: (optional) user id of the non root user
+- **GROUP_ID**: (optional) group id of the non root user
+- **ROOT_PW**: (optional) super user password, default is `docker`
+
 If this has worked correctly, the output of `docker images` should show an image tagged `univr_year_1`.
 
 ### Using
@@ -33,4 +39,5 @@ mkdir univr
 docker run -it --rm --volume /home/user/univr/:/data univr_year_1
 ```
 
-Your mounted folder will be available in the container's `/data` directory, so you can just `cd` there and start working. Run this command any want you want to work in this environment.
+Your mounted folder will be available in the container's `/data` directory, so you can just `cd` there and start working. Run this command any want you want to work in this environment. <br>
+**www** is the default non root user, to log as super user type `su root`. The password (default is 'docker') can be set with the build arg `ROOT_PW`,
